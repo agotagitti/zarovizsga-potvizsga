@@ -17,9 +17,9 @@ class PeopleDaoTest {
     void init() throws SQLException {
         MariaDbDataSource dataSource;
         dataSource = new MariaDbDataSource();
-        dataSource.setUrl("jdbc:mariadb://localhost:3306/employees?useUnicode=true");
-        dataSource.setUser("employees");
-        dataSource.setPassword("employees");
+        dataSource.setUrl("jdbc:mariadb://localhost:3306/people?useUnicode=true");
+        dataSource.setUser("people");
+        dataSource.setPassword("people");
 
         Flyway flyway = Flyway.configure().dataSource(dataSource).load();
 
